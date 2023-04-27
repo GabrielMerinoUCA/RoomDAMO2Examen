@@ -9,7 +9,7 @@ import ni.edu.uca.miproyectofinal.data.dao.DaoVendedor
 import ni.edu.uca.miproyectofinal.data.model.Admin
 import ni.edu.uca.miproyectofinal.data.model.Vendedor
 
-@Database(entities = [Admin::class, Vendedor::class], version = 1, exportSchema = false)
+@Database(entities = [Admin::class, Vendedor::class], version = 2, exportSchema = false)
 abstract class DB: RoomDatabase() {
     abstract fun daoVendedor(): DaoVendedor
     abstract fun daoAdmin(): DaoAdmin
@@ -27,7 +27,7 @@ abstract class DB: RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     DB::class.java,
-                    "user_database"
+                    "BD_ExamenDAMO2"
                 ).build()
                 INSTANCE = instance
                 return instance
