@@ -9,7 +9,7 @@ interface DaoVendedor {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addVendedor(vendedor: Vendedor)
 
-    @Query("SELECT * FROM Admin ORDER BY id")
+    @Query("SELECT * FROM Vendedor ORDER BY idVendedor")
     fun readAllVendedorData(): LiveData<List<Vendedor>>
 
     @Update

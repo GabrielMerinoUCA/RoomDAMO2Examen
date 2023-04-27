@@ -9,7 +9,7 @@ interface DaoAdmin {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addAdmin(admin: Admin)
 
-    @Query("SELECT * FROM Admin ORDER BY id")
+    @Query("SELECT * FROM Admin ORDER BY idAdmin")
     fun readAllAdminData(): LiveData<List<Admin>>
 
     @Update
